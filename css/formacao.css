@@ -1,0 +1,137 @@
+.formacao {
+  background-color: #141414;
+}
+
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  color: #fff;
+  gap: 80px;
+  padding: 60px;
+}
+
+.formacao .subtitulo {
+  max-width: 5ch;
+  color: #000;
+}
+
+.formacao-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  color: #a3a3a3;
+  max-width: 40ch;
+}
+
+.formacao-texto strong {
+  font-weight: bold;
+  color: #fff;
+}
+
+.formacao-lista {
+  display: flex;
+  gap: 20px;
+}
+
+.formacao-lista-info {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  padding: 20px;
+  background: #000;
+  gap: 20px;
+  border-radius: 4px;
+}
+
+.formacao-lista-info::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 4px;
+  background-image: linear-gradient(#b6f829, #67dd0a);
+  top: 0;
+  top: 20px;
+  left: -4px;
+}
+
+.curso {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.curso h3 {
+  font-size: 0.875rem;
+  color: #8f8f8f;
+  position: relative;
+}
+
+.curso li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 1.125rem;
+}
+
+.idioma li {
+  display: inline;
+}
+
+.curso span {
+  color: #8f8f8f;
+  font-weight: 500;
+}
+
+.curso h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("/img/cursos.svg");
+  position: absolute;
+  background-repeat: none;
+  left: -50px;
+  top: -6px;
+}
+
+.idioma h3::before {
+  background-image: url("/img/idiomas.svg");
+}
+
+@media (max-width: 1000px) {
+  .formacao .subtitulo {
+    max-width: 4ch;
+  }
+}
+
+@media (max-width: 840px) {
+  .formacao .subtitulo {
+    max-width: 3ch;
+  }
+  .formacao-lista {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    gap: 40px;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  .formacao .subtitulo {
+    color: #fff;
+  }
+
+  .formacao-texto,
+  .formacao-lista {
+    justify-content: center;
+  }
+}

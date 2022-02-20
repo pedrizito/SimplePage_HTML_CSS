@@ -1,0 +1,70 @@
+.rodape {
+  background-color: #000;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+}
+
+.rodape p {
+  color: #cccccc;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+.rodape span {
+  color: #8f8f8f;
+}
+
+.rodape a {
+  color: #fff;
+}
+
+.rodape ul {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.rodape li {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.225rem;
+  line-height: 1.1;
+}
+
+.rodape-container::before {
+  position: absolute;
+  top: -70px;
+  left: 60px;
+  content: "";
+  background-image: url("/img/detalhe.svg");
+  height: 130px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 850px) {
+  .rodape li {
+    font-size: 1.5rem;
+  }
+
+  .rodape p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .rodape-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
